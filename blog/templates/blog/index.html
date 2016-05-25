@@ -3,7 +3,7 @@
 {% block body %}
     {% for post in post_list %}
         <ul>
-            <a href="#">{{ post.title }}</a>
+            <a href="{% url 'blog:detail' post.pk %}">{{ post.title }} [{{post.comment_set.all.count}}]</a>
         </ul>
     {% endfor %}
 {% endblock %}
