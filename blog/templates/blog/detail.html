@@ -14,7 +14,7 @@
                 {{ comment.content }}
             </div>
             {% endfor %}
-            <a href="#">덧글만들기</a>
+            <a href="{% url 'blog:comment-create' post.pk %}">덧글만들기</a>
         </div>
     </div>
 </div>
