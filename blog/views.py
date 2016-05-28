@@ -32,7 +32,7 @@ def comment_new(request, pk):
             comment = form.save(commit=False)
             comment.post = post
             comment.save()
-            return redirect('blog:detail', pk)
+            return redirect(post.get_absolute_url())
     else:
         form = CommentForm()
     return render(request, 'blog/comment_form.html', {'form': form})
