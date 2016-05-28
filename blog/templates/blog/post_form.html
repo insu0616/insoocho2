@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block body %}
+<div class="row">
+    <div= class="container">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% include 'blog/form-template.html' %}
+        </form>
+    </div>
+</div>
+{% endblock %}
